@@ -4,4 +4,4 @@ def equal_len(x, y):
         x.append("NA")
     while len(y) < len(x):
         x.append("NA")
-    return [x,y]
+    return [x,y] #Returns a list of two lists.
