@@ -23,9 +23,10 @@ def timeAddition(times):
 def getTimesByList():
     inp = "0:00"
     allInputs = []
-    while len(inp) == len("0:00") and inp[1] == ":":
+    while len(inp) == len("0:00"):
         allInputs.append(inp)
-        inp = input("Enter a time in H:MM format, or anything else to submit.\n")
+        inp = input("Enter a time in H:MM format, or hit enter to submit.\n")
     return timeAddition(allInputs)
 
 print("Your total time is " + str(getTimesByList()))
+input("Press enter to end the program.")
