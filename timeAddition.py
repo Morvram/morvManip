@@ -18,7 +18,19 @@ def timeAddition(times):
     if type(times) == type([]):
         #We're dealing with list input.
         return timeAddList(times)
-    #TODO what if it's not a list?
+    if type(times) == type(""):
+        #If it's a string input, try comma separated or space separated.
+        if ", " in times:
+            return timeAddList(times.split(", "))
+        else if "," in times:
+            return timeAddList(times.split(","))
+        else if " " in times:
+            return timeAddList(times.split(" "))
+        else:
+            x = times[4]
+            return timeAddList(times.split(x))
+            #I'm not sure if this will work correctly, because theoretically you could have a construct like "3:00 | 4:00". But how do I address that.
+
 
 def getTimesByList():
     inp = "0:00"
